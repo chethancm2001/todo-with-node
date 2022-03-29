@@ -1,0 +1,20 @@
+<%="node js i will learn  "%>
+<%- include('header.ejs') %>  
+<form class="myForm" method="POST" enctype="application/x-www-form-urlencoded" action="http://localhost:3000/">
+
+    <p>
+    <label>add
+    <input type="text" name = "add" id="add" required>
+    </label> 
+    <input type="submit">
+</form>
+
+<% list.forEach(function(todo) { %>
+    
+    <h4> <%= todo.listname %>
+        <% let link = "http://localhost:3000/" + todo.id %>
+
+        <a href=<%=link%>> done </a></h4>
+ <% }); %> 
+
+<%- include('footer.ejs') %>   
